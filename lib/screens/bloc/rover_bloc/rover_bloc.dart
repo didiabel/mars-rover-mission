@@ -4,17 +4,18 @@ import 'package:mars_rover_mission/screens/bloc/rover_bloc/rover_events.dart';
 import 'package:mars_rover_mission/screens/bloc/rover_bloc/rover_states.dart';
 
 class RoverBloc extends Bloc<RoverEvent, RoverState> {
-  Rover rover = Rover(0, 0, Direction.S, 200);
-
   RoverBloc()
-      : super(RoverUpdatedState(
-            Rover(0, 0, Direction.S, 200), 'Enter commands')) {
+      : super(
+          RoverUpdatedState(Rover(0, 0, Direction.S, 200), 'Enter commands'),
+        ) {
     on<ExecuteCommands>((event, emit) {
       try {
-        rover = rover.readAndExecuteCommands(event.commandsString);
+        final updatedRover =
+            state.rover.readAndExecuteCommands(event.commandsString).copyWith();
+
         emit(RoverUpdatedState(
-          rover,
-          'Rover has moved to: (${rover.x}, ${rover.y})',
+          updatedRover,
+          'Rover has moved to: (${updatedRover.x}, ${updatedRover.y})',
         ));
       } catch (e) {
         emit(RoverErrorState(state.rover, e.toString()));
