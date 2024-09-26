@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "443630856952",
+    "project_id": "mars-rover-mission",
+    "storage_bucket": "mars-rover-mission.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443630856952:android:3874af079ccad3d3b4290d",
+        "android_client_info": {
+          "package_name": "com.didiabel.mars_rover_mission"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByNecTVnNV4QjUCY6koqyfK6nTnb6CNAI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

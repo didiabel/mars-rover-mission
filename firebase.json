@@ -1,0 +1,39 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "mars-rover-mission",
+          "appId": "1:443630856952:android:3874af079ccad3d3b4290d",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "mars-rover-mission",
+          "appId": "1:443630856952:ios:d3f9b56f384b094ab4290d",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "mars-rover-mission",
+          "configurations": {
+            "android": "1:443630856952:android:3874af079ccad3d3b4290d",
+            "ios": "1:443630856952:ios:d3f9b56f384b094ab4290d",
+            "web": "1:443630856952:web:48fdb1d4b4006d4fb4290d"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
